@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Personal - Cada persona es un mundo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Author" content="Nucleo S.A. Personal Paraguay" />
+<meta name="Copyright" content="Nucleo S.A. Personal Paraguay" />
+<meta name="Publisher" content="Nucleo S.A. Personal Paraguay" />
+<meta name="Description"
+	content="Bienvenido a Personal Paraguay, compañía líder en innovación en comunicaciones móviles de Paraguay. Encontrá los mejores Servicios, Promociones, Planes y Packs de telefonía móvil para vos o tu Empresa. Elegí tu celular, Adherite a Club Personal , Navegá en Internet a la mayor velocidad movil y  hacé gestiones Online." />
+<meta name="keywords"
+	content="portabilidad, portabilidad numérica, tu número es tuyo, y es personal, personal, pasate a personal, conservar tu número, cañete, cañete el fletero, cambair de nuemero,  personal, celular, comprar celular, comprar equipo, equipo, telefonos, telefonía móvil,, internet 4g, Juan Saldo, Roaming,  sms, sms gratis, planes, packs, entretenimiento, empresas, roaming, club personal, gestiones online, autogestión, personal blackberry, personal nokia, personal samsung, personal sony ericcson, personal LG, personal iphone, promociones, personal mensajes, internet móvil, celulares, telefonía celular, 2x1, recarga de crédito, recarga personal, doble recarga personal, personal música, personal video, personal apps, billetera personal, envios personal, oficinas comerciales, sucursales, smartphone, nucleo, nucleo personal, portabilidad, tu número es tuyo, y es personal, pasate a personal, cada persona es un mundo" />
+	
+<link rel="stylesheet" type="text/css" href="css/loginV3.css">
+<link rel="stylesheet" type="text/css" href="css/button.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/960.css">
+<link rel="stylesheet" type="text/css" href="css/slidingtabs.css">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-815962-1']);
+  _gaq.push(['_setDomainName', 'personal.com.py']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="lib/jquery/jquery-1.10.2.min.js"></script> 
+<script src="js/login.js"></script>
+<script type="text/javascript">$(window).load(function(){PPY_initLoginForm();});</script> 
+
+<script type="text/javascript">
+//'250956941735722'
+window.fbAsyncInit = function() {FB.init({appId: '766424833369306', status: true, cookie: true, xfbml: true});};
+(function(d){
+	   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	   if (d.getElementById(id)) {return;}
+	   js = d.createElement('script'); js.id = id; js.async = true;
+	   js.src = "//connect.facebook.net/es_LA/all.js";
+	   ref.parentNode.insertBefore(js, ref);
+	  }(document));
+</script>
+
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="login">
+			<div class="box">
+				<div class="header">
+					<div class="container">
+						<img src="images/header/img_logo.png">
+					</div>
+				</div>
+				<div class="container">
+				<div class="error" id="error_alert">Error message</div>
+					<form class="form alpha grid_7" name="loginform" id="loginform">
+					<div class="lf">
+						<h1>
+							Complete los campos con sus datos para iniciar sesión de su
+							cuenta <b>Personal</b>.
+						</h1>
+						<div class="sep"></div>
+						
+							<div class="row">
+							<label>Usuario</label> <input class=" form-control"
+								id="user" maxlength="75" name="user" type="text">
+						</div>
+
+						<div class="row">
+							<label>Contraseña</label> <input class=" form-control"
+								id="password" maxlength="75" name="password"  type="password">
+						</div>
+						<a id="enviar" class="login_button  omega button"
+							onclick="PPY_postLoginForm(null);"
+							data-loading-text="Procesando..."> Ingresar</a>
+						<p class="cache_login">
+							<input type="checkbox"> Mantener logueada al cuenta
+						</p>
+						<input type="hidden" name="client_id"/>
+						<input type="hidden" name="grant_type"/>
+						<input type="hidden" name="response_type"/>
+						<input type="hidden" name="redirect_uri"/>
+						<input type="hidden" name="token"/>
+					</div>
+					</form>
+					<!-- END  LF-->
+					<div class="sep_vert"></div>
+					<div class="rg">
+						<!-- START RG -->
+						<h1>
+							Conectate a <strong>Mi Mundo Personal</strong> con tu cuenta de
+							Facebook!
+						</h1>
+						<div class="sep"></div>
+						<p>
+							Para conectar hace click en le boton de <strong>Conectar
+								con Facebook</strong> y tu cuenta quedara vinculada con tu perfil.
+						</p>
+						<div class="fb-login-button" data-max-rows="1" data-size="large"
+							data-show-faces="false" data-auto-logout-link=false 
+							onlogin="PPY_facebookLogin();"></div>
+						</div>				
+				</div>
+				<div class="footer">
+					<div class="container">
+						<ul>
+							<li>Olvidaste tu <a href="#reset_pass">contraseña</a></li>
+							<li>No tenes cuenta? Crear una <a href="#requires_new_user">cuenta nueva</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="fb-root"></div>
+	<script>$("#password" ).keypress(function(e) {if(e.keyCode === 13){PPY_postLoginForm(null);}});</script>
+</body>
+</html>
+
+

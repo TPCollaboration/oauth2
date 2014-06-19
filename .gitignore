@@ -1,0 +1,10 @@
+.settings/**
+classes/**
+target/**
+.factorypath
+.classpath
+.project
+bin/*
+/target
+*.pdf
+/target

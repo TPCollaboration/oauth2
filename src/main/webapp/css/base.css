@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea,input,p,a,li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a {
+    outline-style: none;
+    text-decoration: none;
+    color: #008c90;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ---------------------------------------- STRUCTURE */
+
+h1 {
+    font: 38px/0.9em 'Carrois Gothic SC', sans-serif;
+    text-transform: lowercase;
+    margin-bottom: 20px;
+    color: #433527;
+    padding-left: 10px;
+}
+
+h2 {
+    font: 20px/0.9em 'Carrois Gothic SC', sans-serif;
+    text-transform: uppercase;
+    color: #433527;
+    margin-bottom: 5px;
+/*
+    margin-top: 40px;
+*/
+}
+
+h3 {
+    font: 20px/0.9em 'Carrois Gothic SC', sans-serif;
+    color: #433527;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h4 {
+    font: 16px/1em 'Carrois Gothic SC', sans-serif;
+    color: #433527;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
