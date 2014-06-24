@@ -35,7 +35,7 @@ public class ConfigurationResource {
 	private EntityManager em;
 	
 	@Inject
-	private OAuthProperties properties;
+	private OAuthProperties oAuthProperties;
 
 	@POST
 	@Path("/")
@@ -109,7 +109,7 @@ public class ConfigurationResource {
 	@Path("/reload")
 	public Response reload(){
 		try {
-			properties.loadProperties();
+			oAuthProperties.loadProperties();
 			return Response.ok().build();
 			
 		} catch (Exception e) {
@@ -117,6 +117,21 @@ public class ConfigurationResource {
 					entity(new OA2Response(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, 
 							"Error interno del servidor.")).build();
 		}
+	}
+	
+	@GET
+	@Path("/info")
+	public Response getOAuthInfo(){
+		try{
+			String info = "version: " + oAuthProperties.getProperty("version");
+			info += " - build date: " + oAuthProperties.getProperty(OAuthProperties.buildTimestamp);
+			return Response.ok().entity(info).build();
+		} catch (Exception e) {
+			return Response.status(Status.INTERNAL_SERVER_ERROR).
+					entity(new OA2Response(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, 
+							"Error interno del servidor.")).build();
+		}
+	
 	}
 	
 	private Response validateConfiguration(Configuration configuration){
@@ -130,7 +145,6 @@ public class ConfigurationResource {
 							"Valores invalidos.")).build();
 		}
 		
-			
 		Pattern regex = Pattern.compile("[\\s$&+,:;=?@#|]");
 		Matcher matcher = regex.matcher(configuration.getName());
 		

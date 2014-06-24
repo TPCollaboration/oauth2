@@ -82,7 +82,8 @@ public class SecurityFilter implements Filter {
 				|| path.startsWith("/images/")
 				|| path.startsWith("/css/")
 				|| path.startsWith("/fonts/")
-				|| path.equals("/oauth2_servicios.pdf")){
+				|| path.equals("/oauth2_servicios.pdf")
+				|| path.equals("/configurations/info")){
 
 			chain.doFilter(request, response);
 			

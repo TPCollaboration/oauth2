@@ -29,6 +29,9 @@
 		<!-- Versiones de librerias de Personal -->
 		<version.wsclient>0.0.1-SNAPSHOT</version.wsclient>
 
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd_HH:mm:ss</maven.build.timestamp.format>
+<!-- 		<mavenBuildTimestamp>${maven.build.timestamp}</mavenBuildTimestamp> -->
 	</properties>
 
 	<dependencyManagement>
@@ -234,8 +237,6 @@
 				<artifactId>jboss-as-maven-plugin</artifactId>
 				<version>${jboss.as.plugin.version}</version>
 			</plugin>
-
-	
 			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -268,8 +269,15 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
+		
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+			<filtering>true</filtering>
+		</resource>
+	</resources>
+		
 	</build>
 
 	<profiles>

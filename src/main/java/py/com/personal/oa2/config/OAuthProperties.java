@@ -29,8 +29,7 @@ public class OAuthProperties  implements Serializable{
 	@OAuthRepository
 	private EntityManager em;
 	
-	public static final String version = "v1";
-	
+	public static final String version = "v1";	
 	public static final String loginFormUrl = "loginFormUrl";
 	public static final String MiMundoAPI = "MiMundoAPI";
 	public static final String MiMundoWEB = "MiMundoWEB";
@@ -38,19 +37,10 @@ public class OAuthProperties  implements Serializable{
 	public static final String PortalCautivo = "PortalCautivo";
 	public static final String LDAPClient = "LDAPClient";
 	public static final String AuthenticateUrl = "AuthenticateUrl";
+	public static final String buildTimestamp = "build.timestamp";
 
 	public OAuthProperties(){
 		super();
-		//TODO: upload from a table from the database.
-		//use column names as key.
-		//http://localhost/oauth2/v1/login.html
-//		 this.put(loginFormUrl, "/oauth2/login.html");
-//		 this.put(MiMundoAPI, "3kVfBA==");
-//		 this.put(MiMundoWEB,"TbEXNw==");
-//		 this.put(WebMailUrl,"http://asusisv-hajbdes1.sis.personal.net.py/webmail/webmail.aspx");
-//		 this.put(WebMailUrl,"http://www.personal.com.py/webmail/");
-//		 this.put(WebMailUrl,"http://pcsissva-asu03.personal.com.py/webmail/webmail.aspx");
-
 	}
 	
 	@PostConstruct
@@ -59,7 +49,8 @@ public class OAuthProperties  implements Serializable{
 		this.put(LDAPClient,"2dlQe8tWAEw=");
 		this.put(PortalCautivo,"4kVfBA==");
 		loadProperties();
-		this.properties.put("version", this.version);
+		loadResources();
+		this.properties.put("version", OAuthProperties.version);
 	}
 	
 	//verifies that a property exists and that 
@@ -81,6 +72,10 @@ public class OAuthProperties  implements Serializable{
 		for(Configuration c : configurations){
 			this.properties.put(c.getName(), c.getValue());
 		}
+	}
+	
+	private void loadResources(){
+		put(buildTimestamp, ResourceBundelLocator.getString(buildTimestamp));
 	}
 	
 	public Object get(Object key){
