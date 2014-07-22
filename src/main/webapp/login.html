@@ -38,17 +38,6 @@
 <script src="js/login.js"></script>
 <script type="text/javascript">$(window).load(function(){PPY_initLoginForm();});</script> 
 
-<script type="text/javascript">
-//'250956941735722'
-window.fbAsyncInit = function() {FB.init({appId: '766424833369306', status: true, cookie: true, xfbml: true});};
-(function(d){
-	   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-	   if (d.getElementById(id)) {return;}
-	   js = d.createElement('script'); js.id = id; js.async = true;
-	   js.src = "//connect.facebook.net/es_LA/all.js";
-	   ref.parentNode.insertBefore(js, ref);
-	  }(document));
-</script>
 
 </head>
 
@@ -97,19 +86,7 @@ window.fbAsyncInit = function() {FB.init({appId: '766424833369306', status: true
 					<div class="sep_vert"></div>
 					<div class="rg">
 						<!-- START RG -->
-						<h1>
-							Conectate a <strong>Mi Mundo Personal</strong> con tu cuenta de
-							Facebook!
-						</h1>
-						<div class="sep"></div>
-						<p>
-							Para conectar hace click en le boton de <strong>Conectar
-								con Facebook</strong> y tu cuenta quedara vinculada con tu perfil.
-						</p>
-						<div class="fb-login-button" data-max-rows="1" data-size="large"
-							data-show-faces="false" data-auto-logout-link=false 
-							onlogin="PPY_facebookLogin();"></div>
-						</div>				
+							
 				</div>
 				<div class="footer">
 					<div class="container">
@@ -123,8 +100,6 @@ window.fbAsyncInit = function() {FB.init({appId: '766424833369306', status: true
 		</div>
 	</div>
 
-	<div id="fb-root"></div>
-	<script>$("#password" ).keypress(function(e) {if(e.keyCode === 13){PPY_postLoginForm(null);}});</script>
 </body>
 </html>
 
